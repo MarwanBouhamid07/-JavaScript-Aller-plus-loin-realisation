@@ -54,5 +54,9 @@ fetch("https://dummyjson.com/products")
 
   });
 
+  let emptyCard = document.getElementById("emptyCard");
+  emptyCard.onclick = function() {
+    window.open("product.html")
+  }
 
 

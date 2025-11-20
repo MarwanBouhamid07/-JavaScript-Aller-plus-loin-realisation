@@ -48,3 +48,31 @@ fetch("https://dummyjson.com/products")
   });
 
 
+
+
+  let btnsFilters = document.querySelectorAll(".categories button")
+
+
+  btnsFilters.forEach(btn => {
+    btn.addEventListener("click", () => {
+        let category = btn.getAttribute("data-category")
+        let cards = document.querySelectorAll(".card")
+        btn.classList.add("active")
+        btnsFilters.forEach(otherBtn => {
+            if(otherBtn !== btn){
+                otherBtn.classList.remove("active")
+            }
+        })  
+        cards.forEach(card => {
+            if(category === "all"){
+                card.style.display = "block"
+            } else {
+                if(card.querySelector("p").innerText === category){
+                    card.style.display = "block"
+                } else {
+                    card.style.display = "none"
+                }
+            }
+        })
+    })
+  })  
