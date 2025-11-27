@@ -9,18 +9,30 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-            <nav>
-        <div class="logo">MyStore</div>
+    <header>
+
+        <nav>
+            <div class="logo">MyStore</div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products..." />
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="product.html">Products</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
+    
 <div class="container">
-    <h1>Products by Category</h1>
-
+    <div class="filters">
+    <h1 style="margin-bottom: 20px;">Products by Category</h1>
+    <div class="fi">
+        <button class="top-five-price">Top 5 Price</button>
+        <button class="top-five-rating">Top 5 Rating</button>
+        <button class="all">All</button>
+    </div>
     <div class="categories">
         <button class="active" data-category="all">All</button>
         <button data-category="beauty">beauty</button>
@@ -28,11 +40,27 @@
         <button data-category="groceries">groceries</button>
         <button data-category="furniture">furniture</button>
     </div>
-
-        <div class="grid" id="products">
+    </div>
+</header>
+    
+    <div class="grid" id="products">
 
     </div>
 </div>
+
+<footer>
+    <div class="donner">
+        <div class="total-products">
+            <span id="productCount">0</span> Products Found
+        </div>
+        <div class="moyenne-prix">
+            Average Price: $<span id="moyenPrix">0.00</span>
+        </div>
+    </div>
+    <p>
+        &copy; 2024 MyStore. All rights reserved.
+    </p>
+</footer>
 
 <script src="script.js">
     

@@ -4,8 +4,10 @@ fetch("https://dummyjson.com/products")
     
     let productshtml= document.getElementById("products2")
   for(let i = 0 ; i < 3 ; i++){
+
+
         let div = document.createElement("div")
-        div.className = "card"
+        div.className = "card card-home"
 
         let someProduct = data.products[i]
 
@@ -48,15 +50,18 @@ fetch("https://dummyjson.com/products")
     console.log(data.products[0])
 
 
+      
 
-
+    
+    
 
 
   });
-
+  
   let emptyCard = document.getElementById("emptyCard");
   emptyCard.onclick = function() {
     window.open("product.html")
   }
+
 
 
